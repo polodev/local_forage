@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Make The World Wonderful</title>
+	<link rel="stylesheet" href="assets/bootstrap.min.css"/>
+	<script src="assets/localforage.js"></script>
+	<script src="assets/jquery.min.js"></script>
+	<link rel="stylesheet" href="assets/material/css/bootstrap-material-design.css">
+	<link rel="stylesheet" href="assets/material/css/ripples.css">
+	<style>
+		html {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: sans-serif;
+			background-image: url(assets/login.jpg);
+			background-size: 100%;
+			background-position: 50% 35%;
+			margin : 0;
+			padding: 0;
+		}
+		.logo_wrapper {
+			width: 100%;
+			background-color: #fff;
+		}
+		.logo {
+			width: 400px;
+			margin : 0 auto;
+		}
+		.logo img {
+			width: 100%;
+		}
+		.form-wrapper {
+			margin-top: 70px;
+			margin-right: 20px;
+		}
+		.form-wrapper .form {
+			width: 450px;
+			float: right;
+			padding: 25px 35px ;
+			background-color: rgba(255, 255, 255, 0.95);
+			border-top: 8px solid rgba(0, 150, 136, 0.95);
+		}
+		textarea.form-control {
+			min-height: 50px;
+		}
+		p[id^="inputWarning"] {
+			color : #ff0000;
+			margin : 5px 0;
+		}
+		table tr td {
+			max-height: 50px;
+			overflow: auto;
+		}
+
+		.form-group {
+			margin: 16px 0 0 0;
+		}
+		.logo h1 {
+			margin: 0;
+			padding: 25px 0;
+			font-family: sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+<div class="logo_wrapper">
+	<div class="logo">
+		<h1>Logo of the page</h1>
+	</div>
+</div>
+
+<div class="form-wrapper">
+	<div class="form">
+		<form id="guestForm" class="form-horizontal">
+			<div class="form-group">
+					<input id="name" type="text" class="form-control" placeholder="Enter Your Name">
+					 <p id="inputWarningName warning" hidden>Please Enter a Valid Name</p> 
+			</div>
+			<div class="form-group">
+					<input id="email" type="text" class="form-control" placeholder="Enter Your Email Address">
+					<!-- <p id="inputWarningName warning" hidden>Please Enter Valid Email Address</p> -->
+			</div>
+			<div class="form-group">
+					<input id="mobile" type="tel" class="form-control" placeholder="Enter Your Mobile Number">
+					<p id="inputWarningEmail warning" hidden>Please Enter a valid Email Address or Mobile Number</p>
+			</div>
+			<div class="form-group">
+					<textarea placeholder="Enter Your Message" id="message" class="form-control"></textarea>
+			</div>
+			<div class="text-center">
+					<button type="submit" class="btn btn-primary btn-raised">Support</button>
+			</div>
+		</form>
+		<div id="thankyouBox" class="text-center" hidden>
+		    <h2>Thank you</h2>
+		    <h4 id="thankyouName"></h4>
+		    <h4>for your support!</h4>
+		    <button class="btn btn-success btn-raised" onClick="submitAnother()">Submit another</button>
+		</div>
+	</div>
+</div>
+<script src="assets/material/js/material.js"></script>
+<script src="assets/material/js/ripples.js"></script>
+<script src="assets/index.js"></script>
+<script>
+	$.material.init()
+	$.material.ripples()
+	$.material.input()
+</script>
+</body>
+</html>
+
